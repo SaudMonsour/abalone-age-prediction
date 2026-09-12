@@ -1,0 +1,20 @@
+{
+  "original_rows": 4177,
+  "original_features": 8,
+  "missing_cells": 0,
+  "missing_by_column": {
+    "sex": 0,
+    "length": 0,
+    "diameter": 0,
+    "height": 0,
+    "whole_weight": 0,
+    "shucked_weight": 0,
+    "viscera_weight": 0,
+    "shell_weight": 0,
+    "rings": 0
+  },
+  "missing_target_rows_removed": 0,
+  "excluded_columns": [],
+  "exact_duplicates_removed": 0,
+  "usable_rows": 4177
+}

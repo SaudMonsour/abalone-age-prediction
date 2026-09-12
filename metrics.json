@@ -1,0 +1,106 @@
+{
+  "task": "regression",
+  "primary_metric": "rmse",
+  "higher_is_better": false,
+  "selected_model": "Random forest",
+  "leaderboard": [
+    {
+      "model": "Random forest",
+      "cv_mean": 2.155168224784101,
+      "cv_std": 0.07920871445057283,
+      "fold_scores": [
+        2.130632002364506,
+        2.262091029535216,
+        2.0727816424525813
+      ],
+      "selection_score": -2.155168224784101
+    },
+    {
+      "model": "Ridge regression",
+      "cv_mean": 2.2718379776717144,
+      "cv_std": 0.09313641572964222,
+      "fold_scores": [
+        2.3857014452746066,
+        2.2722466394176566,
+        2.15756584832288
+      ],
+      "selection_score": -2.2718379776717144
+    },
+    {
+      "model": "Dummy baseline",
+      "cv_mean": 3.209241710866168,
+      "cv_std": 0.06148195104174385,
+      "fold_scores": [
+        3.13235664435492,
+        3.282849004415583,
+        3.212519483828002
+      ],
+      "selection_score": -3.209241710866168
+    }
+  ],
+  "test_metrics": {
+    "Random forest": {
+      "rmse": 2.2240997856443845,
+      "mae": 1.5550227038857056,
+      "r2": 0.5430462932649159
+    },
+    "Dummy baseline": {
+      "rmse": 3.290622953710525,
+      "mae": 2.3847700528020006,
+      "r2": -0.00027614964665212405
+    }
+  },
+  "confidence_interval": {
+    "low": 2.0368022062797126,
+    "high": 2.398652593454058,
+    "repeats": 200,
+    "method": "Percentile bootstrap on fixed-model holdout predictions; stratified by class for classification",
+    "limitation": "Conditional on this fitted model and split; excludes training/model-selection uncertainty"
+  },
+  "train_metrics": {
+    "rmse": 1.2447532983715617,
+    "mae": 0.8605517939722359,
+    "r2": 0.8493373454472741
+  },
+  "train_rows": 3341,
+  "test_rows": 836,
+  "selection_used_test": false,
+  "warnings": [],
+  "parameters": {
+    "Dummy baseline": {
+      "constant": null,
+      "quantile": null,
+      "strategy": "mean"
+    },
+    "Ridge regression": {
+      "alpha": 10.0,
+      "copy_X": true,
+      "fit_intercept": true,
+      "max_iter": null,
+      "positive": false,
+      "random_state": null,
+      "solver": "auto",
+      "tol": 0.0001
+    },
+    "Random forest": {
+      "bootstrap": true,
+      "ccp_alpha": 0.0,
+      "criterion": "squared_error",
+      "max_depth": 14,
+      "max_features": 1.0,
+      "max_leaf_nodes": null,
+      "max_samples": null,
+      "min_impurity_decrease": 0.0,
+      "min_samples_leaf": 3,
+      "min_samples_split": 2,
+      "min_weight_fraction_leaf": 0.0,
+      "monotonic_cst": null,
+      "n_estimators": 100,
+      "n_jobs": 1,
+      "oob_score": false,
+      "random_state": 42,
+      "verbose": 0,
+      "warm_start": false
+    }
+  }
+}

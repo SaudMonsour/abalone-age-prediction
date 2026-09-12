@@ -1,0 +1,10 @@
+column,dtype,missing,unique,role
+sex,object,0,3,feature
+length,float64,0,134,feature
+diameter,float64,0,111,feature
+height,float64,0,51,feature
+whole_weight,float64,0,2429,feature
+shucked_weight,float64,0,1515,feature
+viscera_weight,float64,0,880,feature
+shell_weight,float64,0,926,feature
+rings,int64,0,28,target
